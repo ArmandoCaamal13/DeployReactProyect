@@ -14,8 +14,8 @@ function App() {
                     }}
                 >
                     <Routes>
-                        <Route path='DeployECommerce/admin/*' element={<AdminRoutes />} />
-                        <Route path='DeployECommerce/*' element={<PublicRoutes />} />
+                        <Route path='/admin/*' element={<AdminRoutes />} />
+                        <Route path='/*' element={<PublicRoutes />} />
                     </Routes>
                 </PayPalScriptProvider>
         </>
