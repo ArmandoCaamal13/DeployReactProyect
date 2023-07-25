@@ -49,10 +49,15 @@ const Register = () => {
           text: "Usuario registrado correctamente. Por favor, inicia sesión.",
           confirmButtonText: "Continuar",
         }).then(() => {
-          navigate("/DeployECommerce/login");
+          navigate("/login");
         });
-      } else {
-        alert("Datos incorrectos");
+      }else {
+        Swal.fire({
+          icon: "error",
+          title: "Credenciales incorrectas",
+          text: "Por favor verifica tu nombre de usuario y contraseña e intenta nuevamente.",
+          confirmButtonText: "Intentar de nuevo"
+        });
       }
     } catch (error) {
       console.error("Error al registrar:", error.message);
